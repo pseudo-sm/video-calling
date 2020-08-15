@@ -61,7 +61,6 @@ function handleError(error) {
 // (optional) add server code here
 initializeSession();
 var temp_stream;
-var session = OT.initSession(apiKey, sessionId);
 function initializeSession() {
   // Subscribe to a newly created stream
     var session = OT.initSession(apiKey, sessionId);
@@ -92,6 +91,7 @@ function initializeSession() {
   });
 }
  // start
+  var session = OT.initSession(apiKey, sessionId);
   var subscriberProperties = {insertMode: 'append'};
   var subscriber2 = session.subscribe(temp_stream,
     'subscriberContainer',
