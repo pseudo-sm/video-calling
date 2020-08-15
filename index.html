@@ -92,6 +92,7 @@ function initializeSession() {
   });
 }
  // start
+  var subscriberProperties = {insertMode: 'append'};
   var subscriber2 = session.subscribe(temp_stream,
     'subscriberContainer',
     subscriberProperties,
