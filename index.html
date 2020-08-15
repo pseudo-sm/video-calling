@@ -61,8 +61,8 @@ function handleError(error) {
 // (optional) add server code here
 initializeSession();
 var temp_stream;
+var session = OT.initSession(apiKey, sessionId);
 function initializeSession() {
-  var session = OT.initSession(apiKey, sessionId);
   // Subscribe to a newly created stream
   session.on('streamCreated', function(event) {
     session.subscribe(event.stream, 'subscriber', {
