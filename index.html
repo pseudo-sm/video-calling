@@ -64,6 +64,7 @@ var temp_stream;
 var session = OT.initSession(apiKey, sessionId);
 function initializeSession() {
   // Subscribe to a newly created stream
+    var session = OT.initSession(apiKey, sessionId);
   session.on('streamCreated', function(event) {
     session.subscribe(event.stream, 'subscriber', {
       insertMode: 'append',
